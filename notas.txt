@@ -1,0 +1,23 @@
+Las propiedades implementadas automaticamente como:
+    public string Nombre { get; set; }
+No se inicializan en el contructor. Sino con inicializadores de objetos:
+    Cliente cli = new Cliente{Nombre = "pepe"}
+
+
+Api CRUD
+
+GET     /api/clientes           Obtener todos los clientes
+
+GET     /api/clientes/{id}      Obtener cliente por id
+
+POST    /api/clientes           Agregar un nuevo cliente
+
+PUT     /api/clientes/{id}      Editar cliente existente
+
+DELETE  /api/clientes/{id}      Eliminar cliente existente
+
+
+
+No entiendo del todo las opetaciones Lambda ( => ).
+
+return CreatedAtAction(nameof(GetCliente), new { id = cliente.Id }, cliente);
