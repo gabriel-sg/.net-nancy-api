@@ -60,7 +60,11 @@
             },
             "Nancy": {
               "target": "Package",
-              "version": "[2.0.0-clinteastwood, )"
+              "version": "[2.0.0, )"
+            },
+            "Nancy.Hosting.Self": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             }
           },
           "imports": [

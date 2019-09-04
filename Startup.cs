@@ -1,4 +1,4 @@
-﻿//using System;
+﻿using System;
 //using System.Collections.Generic;
 //using System.Linq;
 //using System.Threading.Tasks;
@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 //using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using webapi.Models;
+using Nancy.Hosting.Self;
 
 namespace webapi
 {
@@ -20,6 +21,14 @@ namespace webapi
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
+            using (var host = new NancyHost(new Uri("http://localhost:1234")))
+            {
+                host.Start();
+                Console.WriteLine("Running on http://localhost:1234");
+                Console.ReadLine();
+            }
+
         }
 
         public IConfiguration Configuration { get; }

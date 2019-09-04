@@ -8,6 +8,11 @@ namespace webapi.Models
         {
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseInMemoryDatabase("ListaClientes");
+        }
+
         public DbSet<Cliente> Clientes { get; set; }
     }
 }
