@@ -24,3 +24,6 @@ return CreatedAtAction(nameof(GetCliente), new { id = cliente.Id }, cliente);  ?
 Donde inicializar nacy hosting?
 tuve que tirar el siguiente comando con privilegios
     netsh http add urlacl url="http://+:1234/" user="Todos"
+
+
+Error: El paquete "Nancy.Hosting.Self 2.0.0" se restauró con ".NETFramework,Version=v4.6.1" en lugar de la plataforma de destino del proyecto ".NETCoreApp,Version=v2.2". Puede que el paquete no sea totalmente compatible con el proyecto.

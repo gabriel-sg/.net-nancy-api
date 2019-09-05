@@ -7,6 +7,8 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Nancy.Hosting.Self;
+
 
 namespace webapi
 {
@@ -14,7 +16,14 @@ namespace webapi
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            using (var host = new NancyHost(new Uri("http://localhost:1234")))
+            {
+                host.Start();
+                Console.WriteLine("Running on http://localhost:1234");
+                Console.ReadLine();
+            }
+
+            // CreateWebHostBuilder(args).Build().Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

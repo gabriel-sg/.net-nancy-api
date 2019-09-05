@@ -21,14 +21,6 @@ namespace webapi
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-
-            using (var host = new NancyHost(new Uri("http://localhost:1234")))
-            {
-                host.Start();
-                Console.WriteLine("Running on http://localhost:1234");
-                Console.ReadLine();
-            }
-
         }
 
         public IConfiguration Configuration { get; }
