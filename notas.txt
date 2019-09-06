@@ -4,26 +4,18 @@ No se inicializan en el contructor. Sino con inicializadores de objetos:
     Cliente cli = new Cliente{Nombre = "pepe"}
 
 
-Api CRUD
-
-GET     /api/clientes           Obtener todos los clientes
-
-GET     /api/clientes/{id}      Obtener cliente por id
-
-POST    /api/clientes           Agregar un nuevo cliente
-
-PUT     /api/clientes/{id}      Editar cliente existente
-
-DELETE  /api/clientes/{id}      Eliminar cliente existente
-
-
 
 return CreatedAtAction(nameof(GetCliente), new { id = cliente.Id }, cliente);  ??
 
 
 Donde inicializar nacy hosting?
-tuve que tirar el siguiente comando con privilegios
+tuve que tirar el siguiente comando con privilegios para que pueda abrir el puerto.
     netsh http add urlacl url="http://+:1234/" user="Todos"
 
 
 Error: El paquete "Nancy.Hosting.Self 2.0.0" se restauró con ".NETFramework,Version=v4.6.1" en lugar de la plataforma de destino del proyecto ".NETCoreApp,Version=v2.2". Puede que el paquete no sea totalmente compatible con el proyecto.
+
+Validaciones y respuestas de error en Nancy?
+
+
+

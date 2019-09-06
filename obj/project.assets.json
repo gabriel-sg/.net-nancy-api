@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "Metrics.NET/0.4.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Metrics.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Metrics.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -2749,6 +2758,19 @@
           "lib/net452/Nancy.Hosting.Self.dll": {}
         }
       },
+      "Nancy.Metrics/0.4.7": {
+        "type": "package",
+        "dependencies": {
+          "Metrics.NET": "0.4.7",
+          "Nancy": "1.2.0"
+        },
+        "compile": {
+          "lib/net45/Nancy.Metrics.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Nancy.Metrics.dll": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -4566,6 +4588,20 @@
     }
   },
   "libraries": {
+    "Metrics.NET/0.4.7": {
+      "sha512": "aAXRa7afjOCVDThvP9llHjNKX6DTZruufTfAhjv7wPOZfrUpBb8xPXV1+2M8ekMLt+bOjA1r1UhPdrXwe4shCA==",
+      "type": "package",
+      "path": "metrics.net/0.4.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Metrics.XML",
+        "lib/net45/Metrics.dll",
+        "lib/net45/Metrics.pdb",
+        "metrics.net.0.4.7.nupkg.sha512",
+        "metrics.net.nuspec"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "owAlEIUZXWSnkK8Z1c+zR47A0X6ykF4XjbPok4lQKNuciUfHLGPd6QnI+rt/8KlQ17PmF+I4S3f+m+Qe4IvViw==",
       "type": "package",
@@ -7371,6 +7407,20 @@
         "lib/net452/Nancy.Hosting.Self.xml",
         "nancy.hosting.self.2.0.0.nupkg.sha512",
         "nancy.hosting.self.nuspec"
+      ]
+    },
+    "Nancy.Metrics/0.4.7": {
+      "sha512": "y/QoQ2LBSkrB3Wjop/FyTYSPNxKQ4L3/C3xzJHItXF7SetPl6E8pumnrrOuREGao11cK4E+JQ1nB5/Y0f8rHxQ==",
+      "type": "package",
+      "path": "nancy.metrics/0.4.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Nancy.Metrics.XML",
+        "lib/net45/Nancy.Metrics.dll",
+        "lib/net45/Nancy.Metrics.pdb",
+        "nancy.metrics.0.4.7.nupkg.sha512",
+        "nancy.metrics.nuspec"
       ]
     },
     "NETStandard.Library/2.0.3": {
@@ -12423,7 +12473,8 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Nancy >= 2.0.0",
-      "Nancy.Hosting.Self >= 2.0.0"
+      "Nancy.Hosting.Self >= 2.0.0",
+      "Nancy.Metrics >= 0.4.7"
     ]
   },
   "packageFolders": {
@@ -12491,6 +12542,10 @@
           "Nancy.Hosting.Self": {
             "target": "Package",
             "version": "[2.0.0, )"
+          },
+          "Nancy.Metrics": {
+            "target": "Package",
+            "version": "[0.4.7, )"
           }
         },
         "imports": [
@@ -12506,8 +12561,28 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+      "message": "El paquete \"Metrics.NET 0.4.7\" se restauró con \".NETFramework,Version=v4.6.1\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v2.2\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Metrics.NET",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
       "message": "El paquete \"Nancy.Hosting.Self 2.0.0\" se restauró con \".NETFramework,Version=v4.6.1\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v2.2\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Nancy.Hosting.Self",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Nancy.Metrics 0.4.7\" se restauró con \".NETFramework,Version=v4.6.1\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v2.2\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Nancy.Metrics",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.2"
       ]

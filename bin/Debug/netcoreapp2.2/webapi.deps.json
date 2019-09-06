@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "8c6bc6f540097deb3e5a3818af0d50bb98837b3c"
+    "signature": "50496c60bfba0d73aed95b06e240bce3492f0aa7"
   },
   "compilationOptions": {
     "defines": [
@@ -28,13 +28,25 @@
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Nancy": "2.0.0",
-          "Nancy.Hosting.Self": "2.0.0"
+          "Nancy.Hosting.Self": "2.0.0",
+          "Nancy.Metrics": "0.4.7"
         },
         "runtime": {
           "webapi.dll": {}
         },
         "compile": {
           "webapi.dll": {}
+        }
+      },
+      "Metrics.NET/0.4.7": {
+        "runtime": {
+          "lib/net45/Metrics.dll": {
+            "assemblyVersion": "0.4.7.0",
+            "fileVersion": "0.4.7.0"
+          }
+        },
+        "compile": {
+          "lib/net45/Metrics.dll": {}
         }
       },
       "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
@@ -81,6 +93,21 @@
         },
         "compile": {
           "lib/net452/Nancy.Hosting.Self.dll": {}
+        }
+      },
+      "Nancy.Metrics/0.4.7": {
+        "dependencies": {
+          "Metrics.NET": "0.4.7",
+          "Nancy": "2.0.0"
+        },
+        "runtime": {
+          "lib/net45/Nancy.Metrics.dll": {
+            "assemblyVersion": "0.4.7.0",
+            "fileVersion": "0.4.7.0"
+          }
+        },
+        "compile": {
+          "lib/net45/Nancy.Metrics.dll": {}
         }
       },
       "System.ComponentModel/4.3.0": {
@@ -3344,6 +3371,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Metrics.NET/0.4.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aAXRa7afjOCVDThvP9llHjNKX6DTZruufTfAhjv7wPOZfrUpBb8xPXV1+2M8ekMLt+bOjA1r1UhPdrXwe4shCA==",
+      "path": "metrics.net/0.4.7",
+      "hashPath": "metrics.net.0.4.7.nupkg.sha512"
+    },
     "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -3364,6 +3398,13 @@
       "sha512": "sha512-bVusVYasJmwhJr4RVeVZYZctrUiME1JTZmydrnrxjMZBIEBZsGEmLIxcxXazEAvzfG6Z8dB2ocwlZCt1aX+70g==",
       "path": "nancy.hosting.self/2.0.0",
       "hashPath": "nancy.hosting.self.2.0.0.nupkg.sha512"
+    },
+    "Nancy.Metrics/0.4.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-y/QoQ2LBSkrB3Wjop/FyTYSPNxKQ4L3/C3xzJHItXF7SetPl6E8pumnrrOuREGao11cK4E+JQ1nB5/Y0f8rHxQ==",
+      "path": "nancy.metrics/0.4.7",
+      "hashPath": "nancy.metrics.0.4.7.nupkg.sha512"
     },
     "System.ComponentModel/4.3.0": {
       "type": "package",
